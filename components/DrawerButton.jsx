@@ -1,20 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useLayoutEffect } from "react";
+import useMeasure from "react-use-measure";
 import {
   useDragControls,
   useMotionValue,
   useAnimate,
   motion,
 } from "framer-motion";
-import dynamic from "next/dynamic";
-
-// Динамическая загрузка react-use-measure
-const useMeasure = dynamic(() => import("react-use-measure"));
 
 export const DragCloseDrawerExample = ({ open, setOpen, content }) => {
+  const [isRendered, setIsRendered] = useState(false);
   const [scope, animate] = useAnimate();
   const [drawerRef, { height }] = useMeasure();
   const y = useMotionValue(0);
   const controls = useDragControls();
+
+  // Отложенный рендеринг компонента
+  useLayoutEffect(() => {
+    if (open) {
+      setIsRendered(true);
+    }
+  }, [open]);
 
   const handleClose = async () => {
     animate(scope.current, { opacity: [1, 0] });
@@ -25,7 +30,7 @@ export const DragCloseDrawerExample = ({ open, setOpen, content }) => {
 
   return (
     <>
-      {open && (
+      {isRendered && open && (
         <motion.div
           ref={scope}
           initial={{ opacity: 0 }}
