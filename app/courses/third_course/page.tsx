@@ -2,7 +2,7 @@
 "use client";
 import React, { useState, ReactNode } from "react";
 import Disciplines from "@/components/Links";
-import { DragCloseDrawerExample } from "@/components/DrawerButton";
+import DragCloseDrawerExample from "@/components/DrawerButton";
 import AltDisciplines from "@/components/AltLinks";
 
 // Define the type for the content parameter

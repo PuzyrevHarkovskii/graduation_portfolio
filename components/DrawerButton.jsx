@@ -1,73 +1,72 @@
-import React, { useState, useLayoutEffect } from "react";
-import useMeasure from "react-use-measure";
-import {
-  useDragControls,
-  useMotionValue,
-  useAnimate,
-  motion,
-} from "framer-motion";
+"import";
+import React, { useState, useEffect } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { FiAlertCircle } from "react-icons/fi";
 
-export const DragCloseDrawerExample = ({ open, setOpen, content }) => {
+const DragCloseDrawerExample = ({ open, setOpen, content }) => {
   const [isRendered, setIsRendered] = useState(false);
-  const [scope, animate] = useAnimate();
-  const [drawerRef, { height }] = useMeasure();
-  const y = useMotionValue(0);
-  const controls = useDragControls();
 
-  // Отложенный рендеринг компонента
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (open) {
       setIsRendered(true);
     }
   }, [open]);
 
-  const handleClose = async () => {
-    animate(scope.current, { opacity: [1, 0] });
-    const yStart = typeof y.get() === "number" ? y.get() : 0;
-    await animate("#drawer", { y: [yStart, height] });
+  const handleClose = () => {
     setOpen(false);
   };
 
   return (
-    <>
+    <AnimatePresence>
       {isRendered && open && (
         <motion.div
-          ref={scope}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
           onClick={handleClose}
           className="fixed inset-0 z-50 bg-neutral-950/70"
         >
           <motion.div
-            id="drawer"
-            ref={drawerRef}
             onClick={(e) => e.stopPropagation()}
-            initial={{ y: "100%" }}
-            animate={{ y: "0%" }}
-            transition={{ ease: "easeInOut" }}
-            className="absolute bottom-0 h-[75vh] w-full overflow-hidden rounded-t-3xl bg-neutral-900"
-            style={{ y }}
-            drag="y"
-            dragControls={controls}
-            onDragEnd={() => {
-              if (y.get() >= 100) handleClose();
-            }}
-            dragListener={false}
-            dragConstraints={{ top: 0, bottom: 0 }}
-            dragElastic={{ top: 0, bottom: 0.5 }}
+            className="bg-neutral-900/20 backdrop-blur p-8 fixed inset-0 z-50 grid place-items-center overflow-y-scroll cursor-pointer"
           >
-            <div className="absolute left-0 right-0 top-0 z-10 flex justify-center bg-neutral-900 p-4">
-              <button
-                onPointerDown={(e) => controls.start(e)}
-                className="h-2 w-14 cursor-grab touch-none rounded-full bg-neutral-700 active:cursor-grabbing"
-              ></button>
-            </div>
-            <div className="relative z-0 h-full overflow-y-scroll p-4 pt-12">
-              {content}
-            </div>
+            <motion.div
+              initial={{ scale: 0, rotate: "12.5deg" }}
+              animate={{ scale: 1, rotate: "0deg" }}
+              exit={{ scale: 0, rotate: "0deg" }}
+              onClick={(e) => e.stopPropagation()}
+              className="bg-gradient-to-br from-violet-600 to-indigo-600 text-white p-6 rounded-lg w-full max-w-lg shadow-xl cursor-default relative overflow-hidden"
+            >
+              <FiAlertCircle className="text-white/10 rotate-12 text-[250px] absolute z-0 -top-24 -left-24" />
+              <div className="relative z-10">
+                <div className="bg-white w-16 h-16 mb-2 rounded-full text-3xl text-indigo-600 grid place-items-center mx-auto">
+                  <FiAlertCircle />
+                </div>
+                <h3 className="text-3xl font-bold text-center mb-2">
+                  One more thing!
+                </h3>
+                <div className="text-center mb-6">{content}</div>
+                <div className="flex gap-2">
+                  <button
+                    onClick={handleClose}
+                    className="bg-transparent hover:bg-white/10 transition-colors text-white font-semibold w-full py-2 rounded"
+                  >
+                    Nah, go back
+                  </button>
+                  <button
+                    onClick={handleClose}
+                    className="bg-white hover:opacity-90 transition-opacity text-indigo-600 font-semibold w-full py-2 rounded"
+                  >
+                    Understood!
+                  </button>
+                </div>
+              </div>
+            </motion.div>
           </motion.div>
         </motion.div>
       )}
-    </>
+    </AnimatePresence>
   );
 };
+
+export default DragCloseDrawerExample;
