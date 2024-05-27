@@ -1,13 +1,14 @@
-// components/DragCloseDrawerExample.js
-"use client";
 import React, { useState } from "react";
-import useMeasure from "react-use-measure";
 import {
   useDragControls,
   useMotionValue,
   useAnimate,
   motion,
 } from "framer-motion";
+import dynamic from "next/dynamic";
+
+// Динамическая загрузка react-use-measure
+const useMeasure = dynamic(() => import("react-use-measure"));
 
 export const DragCloseDrawerExample = ({ open, setOpen, content }) => {
   const [scope, animate] = useAnimate();
