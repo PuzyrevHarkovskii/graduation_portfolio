@@ -24,6 +24,17 @@ export default function Page() {
     setIsDrawerOpen(true);
   };
 
+  const socialsConfig = [
+    {
+      rotate: "-2.5deg",
+      scale: 1.1,
+      bgColor: "bg-green-600",
+      textColor: "text-white",
+      text: "2",
+      link: "/courses/second_course/",
+    },
+  ];
+
   const aboutBlocks: AboutBlock[] = [
     {
       title: "Информатика и физика для инженеров",
@@ -184,7 +195,11 @@ export default function Page() {
 
   return (
     <>
-      <Disciplines aboutBlocks={aboutBlocks} semesterNumber="3 семестр" />
+      <Disciplines
+        aboutBlocks={aboutBlocks}
+        semesterNumber="3 семестр"
+        socialsConfig={socialsConfig}
+      />
       <DragCloseDrawerExample
         open={isDrawerOpen}
         setOpen={setIsDrawerOpen}

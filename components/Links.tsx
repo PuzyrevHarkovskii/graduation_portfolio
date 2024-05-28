@@ -1,12 +1,22 @@
 "use client";
 import React, { FC, ReactNode } from "react";
-import { motion } from "framer-motion";
+import { motion, MotionProps } from "framer-motion";
 import Image from "next/image";
 import { twMerge } from "tailwind-merge";
+import Link from "next/link";
 
 interface AboutBlockProps {
   title: string;
   onButtonClick: () => void;
+}
+
+interface SocialsConfig {
+  rotate: string;
+  scale: number;
+  bgColor: string;
+  textColor: string;
+  text: string;
+  link: string;
 }
 
 const handleButtonClick = () => {
@@ -16,9 +26,10 @@ const handleButtonClick = () => {
 interface DisciplinesProps {
   aboutBlocks: AboutBlockProps[];
   semesterNumber: string;
+  socialsConfig: SocialsConfig[];
 }
 
-interface BlockProps {
+interface BlockProps extends MotionProps {
   className?: string;
   children?: ReactNode;
 }
@@ -26,6 +37,7 @@ interface BlockProps {
 export const Disciplines: FC<DisciplinesProps> = ({
   aboutBlocks,
   semesterNumber,
+  socialsConfig,
 }) => {
   return (
     <div className="min-h-screen bg-zinc-900 px-4 py-12 text-zinc-50">
@@ -38,6 +50,7 @@ export const Disciplines: FC<DisciplinesProps> = ({
         className="mx-auto grid max-w-4xl grid-flow-dense grid-cols-12 gap-4"
       >
         <HeaderBlock />
+        <SocialsBlock socialsConfig={socialsConfig} />
         <SemesterBlock semesterNumber={semesterNumber} />
         {aboutBlocks.map((block, index) => (
           <AboutBlock
@@ -101,6 +114,30 @@ const SemesterBlock: FC<{ semesterNumber: string }> = ({ semesterNumber }) => (
   <Block className="col-span-12 text-3xl leading-snug">
     <p className="text-5xl">{semesterNumber}</p>
   </Block>
+);
+
+const SocialsBlock: FC<{ socialsConfig: SocialsConfig[] }> = ({
+  socialsConfig,
+}) => (
+  <>
+    {socialsConfig.map((config, index) => (
+      <Block
+        key={index}
+        whileHover={{
+          rotate: config.rotate,
+          scale: config.scale,
+        }}
+        className={`col-span-6 ${config.bgColor} row-span-2`}
+      >
+        <Link
+          href={config.link}
+          className={`grid h-full place-content-center text-3xl ${config.textColor}`}
+        >
+          <h1 className="text-8xl">{config.text}</h1>
+        </Link>
+      </Block>
+    ))}
+  </>
 );
 
 const AboutBlock: FC<AboutBlockProps> = ({ title, onButtonClick }) => (

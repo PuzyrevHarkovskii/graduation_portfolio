@@ -11,6 +11,17 @@ interface AboutBlock {
   onButtonClick: () => void;
 }
 
+const socialsConfig = [
+  {
+    rotate: "2.5deg",
+    scale: 1.1,
+    bgColor: "bg-blue-500",
+    textColor: "text-white",
+    text: "4",
+    link: "/courses/fourth_course/",
+  },
+];
+
 const handleProgrammingClick = () => {
   console.log("Programming button clicked");
 };
@@ -189,7 +200,11 @@ export default function Page() {
 
   return (
     <>
-      <Disciplines aboutBlocks={aboutBlocks} semesterNumber="8 семестр" />
+      <Disciplines
+        aboutBlocks={aboutBlocks}
+        semesterNumber="8 семестр"
+        socialsConfig={socialsConfig}
+      />
       <DragCloseDrawerExample
         open={isDrawerOpen}
         setOpen={setIsDrawerOpen}

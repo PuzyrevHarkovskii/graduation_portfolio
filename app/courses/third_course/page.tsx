@@ -24,6 +24,17 @@ export default function Page() {
     setIsDrawerOpen(true);
   };
 
+  const socialsConfig = [
+    {
+      rotate: "-2.5deg",
+      scale: 1.1,
+      bgColor: "bg-zinc-50",
+      textColor: "text-black",
+      text: "3",
+      link: "/courses/third_course/",
+    },
+  ];
+
   const aboutBlocks: AboutBlock[] = [
     {
       title: "Управление программными проектами",
@@ -275,7 +286,11 @@ export default function Page() {
 
   return (
     <>
-      <Disciplines aboutBlocks={aboutBlocks} semesterNumber="5 семестр" />
+      <Disciplines
+        aboutBlocks={aboutBlocks}
+        semesterNumber="5 семестр"
+        socialsConfig={socialsConfig}
+      />
       <DragCloseDrawerExample
         open={isDrawerOpen}
         setOpen={setIsDrawerOpen}
