@@ -176,6 +176,14 @@ export default function Page() {
         ),
     },
     {
+      title: "Интегралы и дифференциальные уравнения",
+      onButtonClick: () =>
+        window.open(
+          "https://drive.google.com/drive/folders/1b3WrSsodZka00y4FwTtoyyiSslomFvdD",
+          "_blank"
+        ),
+    },
+    {
       title: "Проектирование и разработка веб-решений",
       onButtonClick: () =>
         window.open(
@@ -187,7 +195,7 @@ export default function Page() {
       title: "Анализ данных и основы Data science",
       onButtonClick: () =>
         window.open(
-          "https://drive.google.com/drive/folders/1V1X-ppg_hBacltZgIPh4kGuATXcKxbbx",
+          "https://drive.google.com/drive/folders/1SFe-z_68Q75NXFpn3EMZZlEisAU2e7WM",
           "_blank"
         ),
     },
@@ -196,6 +204,14 @@ export default function Page() {
       onButtonClick: () =>
         window.open(
           "https://drive.google.com/drive/folders/1_oXE0yvaOWOFnqMKR33we9BzfuELZMnI?usp=sharing",
+          "_blank"
+        ),
+    },
+    {
+      title: "Базы данных",
+      onButtonClick: () =>
+        window.open(
+          "https://drive.google.com/drive/folders/1SPjaPG3ifrUBdUguehllIBqIN5nj_PFf?usp=sharing",
           "_blank"
         ),
     },

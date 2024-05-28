@@ -73,7 +73,7 @@ export default function Page() {
       title: "Физика",
       onButtonClick: () =>
         window.open(
-          "https://drive.google.com/drive/folders/19Og-Dl1M0GWisZW7cT4A35jdTIdQANoa?usp=sharing",
+          "https://drive.google.com/drive/folders/1zQ1WxcLlv01vO0RgRmtlaqLmfqTRGzNb?usp=sharing",
           "_blank"
         ),
     },
@@ -212,7 +212,7 @@ export default function Page() {
       title: "Физика",
       onButtonClick: () =>
         window.open(
-          "https://drive.google.com/drive/folders/1_oXE0yvaOWOFnqMKR33we9BzfuELZMnI?usp=sharing",
+          "https://drive.google.com/drive/folders/1zQ1WxcLlv01vO0RgRmtlaqLmfqTRGzNb?usp=sharing",
           "_blank"
         ),
     },
@@ -220,7 +220,7 @@ export default function Page() {
       title: "Информационные технологии",
       onButtonClick: () =>
         window.open(
-          "https://drive.google.com/drive/folders/1_oXE0yvaOWOFnqMKR33we9BzfuELZMnI?usp=sharing",
+          "https://drive.google.com/drive/folders/1nLAe6FBXUo-kB8mk6FVdmGKhGO3uSKJf?usp=sharing",
           "_blank"
         ),
     },
@@ -228,7 +228,7 @@ export default function Page() {
       title: "Аналитическая геометрия",
       onButtonClick: () =>
         window.open(
-          "https://drive.google.com/drive/folders/1_oXE0yvaOWOFnqMKR33we9BzfuELZMnI?usp=sharing",
+          "https://drive.google.com/drive/folders/1xmfDF1pj_URuZjeHmiT2glPoJAombfn4?usp=sharing",
           "_blank"
         ),
     },
