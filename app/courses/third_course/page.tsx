@@ -48,7 +48,7 @@ export default function Page() {
       title: "IT-менеджмент",
       onButtonClick: () =>
         window.open(
-          "https://drive.google.com/drive/folders/1QxfOpQNKDGoPlyvwMZabUfItOJHLuizh?usp=sharing",
+          "https://drive.google.com/drive/folders/1WEFyK1he6h6O-1-nJzyT3KoVHJWLL1u1?usp=sharing",
           "_blank"
         ),
     },
@@ -56,7 +56,7 @@ export default function Page() {
       title: "Основы бизнес-информатики",
       onButtonClick: () =>
         window.open(
-          "https://drive.google.com/drive/folders/1QxfOpQNKDGoPlyvwMZabUfItOJHLuizh?usp=sharing",
+          "https://drive.google.com/drive/folders/1aTrCSUJvcPdwQP6WDWKehcCeGxctAy8x?usp=sharing",
           "_blank"
         ),
     },
@@ -65,6 +65,14 @@ export default function Page() {
       onButtonClick: () =>
         window.open(
           "https://drive.google.com/drive/folders/1hUyIePFsfUGTYpLKDlkO8zj7M592v5eq?usp=sharing",
+          "_blank"
+        ),
+    },
+    {
+      title: "Математические основы компьютерной графики",
+      onButtonClick: () =>
+        window.open(
+          "https://drive.google.com/drive/folders/1ZDdvj7zkqroSSWiaMZsp8WADpkddublj?usp=sharing",
           "_blank"
         ),
     },
@@ -199,6 +207,14 @@ export default function Page() {
       onButtonClick: () =>
         window.open(
           "https://drive.google.com/drive/folders/1N2MemKgXnw6DWqOAfv_P7WeD_MHbqN3Z?usp=sharing",
+          "_blank"
+        ),
+    },
+    {
+      title: "Компьютерная графика",
+      onButtonClick: () =>
+        window.open(
+          "https://drive.google.com/drive/folders/1WJnoNLYaz5DRf97hR13MdEtx04zQIpmJ",
           "_blank"
         ),
     },

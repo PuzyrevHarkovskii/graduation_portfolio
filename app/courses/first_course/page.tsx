@@ -48,7 +48,7 @@ export default function Page() {
       title: "Информатика",
       onButtonClick: () =>
         window.open(
-          "https://drive.google.com/drive/folders/19Og-Dl1M0GWisZW7cT4A35jdTIdQANoa?usp=sharing",
+          "https://drive.google.com/drive/folders/18bu7wB0GPtQA5vL6dErpzM4ZeWu-NZ8k?usp=sharing",
           "_blank"
         ),
     },
@@ -56,7 +56,15 @@ export default function Page() {
       title: "Информационные технологии в математике",
       onButtonClick: () =>
         window.open(
-          "https://drive.google.com/drive/folders/19Og-Dl1M0GWisZW7cT4A35jdTIdQANoa?usp=sharing",
+          "https://drive.google.com/drive/folders/1fXhCEDmSInLBDe6wyy4qYdjsSc0WsDNU?usp=sharing",
+          "_blank"
+        ),
+    },
+    {
+      title: "Программирование",
+      onButtonClick: () =>
+        window.open(
+          "https://drive.google.com/drive/folders/1EnfGm058UxDSF1bnOWgngijRqIhy6dNG?usp=sharing",
           "_blank"
         ),
     },
@@ -73,7 +81,7 @@ export default function Page() {
       title: "Основы компьютерной алгебры",
       onButtonClick: () =>
         window.open(
-          "https://drive.google.com/drive/folders/19Og-Dl1M0GWisZW7cT4A35jdTIdQANoa?usp=sharing",
+          "https://drive.google.com/drive/folders/1jkwGU9kGHmG--6pep-fgN7rvqWJiWLH-?usp=sharing",
           "_blank"
         ),
     },
@@ -196,7 +204,7 @@ export default function Page() {
       title: "Дискретные структуры",
       onButtonClick: () =>
         window.open(
-          "https://drive.google.com/drive/folders/1_oXE0yvaOWOFnqMKR33we9BzfuELZMnI?usp=sharing",
+          "https://drive.google.com/drive/folders/1TWDHFY6oREeO_kgYb6Y9F5HoMA5a-cLl?usp=sharing",
           "_blank"
         ),
     },
@@ -228,7 +236,7 @@ export default function Page() {
       title: "Линейная алгебра и теория матриц",
       onButtonClick: () =>
         window.open(
-          "https://drive.google.com/drive/folders/1_oXE0yvaOWOFnqMKR33we9BzfuELZMnI?usp=sharing",
+          "https://drive.google.com/drive/folders/19Tff9oh-DZGKZtMq7WQOHemFZv5YDC71",
           "_blank"
         ),
     },
@@ -237,7 +245,7 @@ export default function Page() {
       title: "Математический анализ",
       onButtonClick: () =>
         window.open(
-          "https://drive.google.com/drive/folders/1_oXE0yvaOWOFnqMKR33we9BzfuELZMnI?usp=sharing",
+          "https://drive.google.com/drive/folders/1PyyjaWeKT8FkU6UyjmZmkb9WkZT7-5Re?usp=sharing",
           "_blank"
         ),
     },
@@ -245,7 +253,7 @@ export default function Page() {
       title: "Практика",
       onButtonClick: () =>
         window.open(
-          "https://drive.google.com/drive/folders/1_oXE0yvaOWOFnqMKR33we9BzfuELZMnI?usp=sharing",
+          "https://github.com/PuzyrevHarkovskii/PuzyrevHarkovskii.github.io/tree/main/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B0%20(1%20%D1%81%D0%B5%D0%BC%D0%B5%D1%81%D1%82%D1%80)",
           "_blank"
         ),
     },

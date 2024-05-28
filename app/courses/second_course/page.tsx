@@ -68,6 +68,14 @@ export default function Page() {
           "_blank"
         ),
     },
+    {
+      title: "Практика",
+      onButtonClick: () =>
+        window.open(
+          "https://drive.google.com/drive/folders/1psZHPoyZOFiCnqq2-Z-C5CdDWQ9wRz6Z?usp=sharing",
+          "_blank"
+        ),
+    },
   ];
 
   const altBlocks = [
@@ -171,7 +179,7 @@ export default function Page() {
       title: "Проектирование и разработка веб-решений",
       onButtonClick: () =>
         window.open(
-          "https://drive.google.com/drive/folders/1-NyT5fEG5PipjaHdn7BbP7FHyy4CLC50?usp=sharing",
+          "https://drive.google.com/drive/folders/15RwQoUvp8blD_6Dnxaz2qAobYUh-OrOE?usp=sharing",
           "_blank"
         ),
     },
@@ -188,6 +196,22 @@ export default function Page() {
       onButtonClick: () =>
         window.open(
           "https://drive.google.com/drive/folders/1_oXE0yvaOWOFnqMKR33we9BzfuELZMnI?usp=sharing",
+          "_blank"
+        ),
+    },
+    {
+      title: "Организация и архитектура ЭВМ",
+      onButtonClick: () =>
+        window.open(
+          "https://drive.google.com/drive/folders/16KnV6iJ_syMunVxRfypQeNHCHZMBCc2O?usp=sharing",
+          "_blank"
+        ),
+    },
+    {
+      title: "Курсовая работа",
+      onButtonClick: () =>
+        window.open(
+          "https://docs.google.com/document/d/16Hd_Tt39ng35Q815NLBmIRcfB3_X6aGqIvsj1X2q248/edit",
           "_blank"
         ),
     },
